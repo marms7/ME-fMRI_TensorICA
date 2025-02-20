@@ -48,7 +48,7 @@ def component_identify(out_dir,tica_type,keep_ratio):
             spectrum, freqs = utils.get_spectrum(Time_course[:,second_level_comp[i]], 1)
             ratio = sum(spectrum[np.where((freqs>0.01)&(freqs<0.1))])/sum(spectrum[np.where(freqs>0.01)])
             # print(ratio)
-            if ratio>0.6:
+            if ratio>0.7:
                 acc_cmp.append(second_level_comp[i])
             else:
                 reject_comp.append(second_level_comp[i])
